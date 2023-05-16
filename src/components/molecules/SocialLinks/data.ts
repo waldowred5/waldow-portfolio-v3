@@ -1,0 +1,55 @@
+export const socialLinksContent = {
+  top: [
+    {
+      color: '#C56CEF',
+      icon: 'AiFillTwitterCircle',
+      iconFamily: 'Ai',
+      link: 'https://twitter.com/WaldowTheDev',
+      shadowSize: 12,
+      size: 70,
+      sizeWrapper: 70,
+    },
+    {
+      color: '#C56CEF',
+      icon: 'FaLinkedinIn',
+      iconFamily: 'Fa',
+      link: 'https://www.linkedin.com/in/daniel-waldow-22a85398/',
+      shadowSize: 12,
+      size: 56,
+      sizeWrapper: 70,
+    },
+  ],
+  middle: [
+    {
+      color: '#38E000',
+      colorWrapper: '#38E000',
+      icon: '',
+      iconFamily: '',
+      link: 'https://github.com/waldowred5',
+      shadowSize: 24,
+      size: 150,
+      sizeWrapper: 160,
+      svgRef: 'Github',
+    },
+  ],
+  bottom: [
+    {
+      color: '#C56CEF',
+      icon: 'FaInstagram',
+      iconFamily: 'Fa',
+      link: 'https://instagram.com/drummercats/',
+      shadowSize: 12,
+      size: 60,
+      sizeWrapper: 70,
+    },
+    {
+      color: '#C56CEF',
+      icon: 'FaFacebook',
+      iconFamily: 'Fa',
+      link: 'https://www.facebook.com/daniel.waldow.7',
+      shadowSize: 12,
+      size: 60,
+      sizeWrapper: 70,
+    },
+  ],
+};
