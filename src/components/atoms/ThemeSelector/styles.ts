@@ -1,24 +1,15 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { FONT_FAMILY } from '../../../utils/constants'
-import { media, SCREEN_SIZE } from '../../../utils//layout'
-
-const getButtonStyle = (propName) => ({ colorVariant, theme }) => {
-  return theme.colors.button[colorVariant][propName]
-}
-
-const getFontFamily = (fontFamily) => ({ theme }) => {
-  return theme.fonts[fontFamily]
-}
+import { media, SCREEN_SIZE } from '../../../utils/layout'
 
 const buttonProps = {
-  colorVariant: PropTypes.string,
+  color: PropTypes.string,
   theme: PropTypes.object,
 }
 
 const StyledThemeButton = styled('button', buttonProps)`
-  background-color: ${getButtonStyle('background')};
-  color: ${getButtonStyle('text')};
+  background-color: #071D3A;
+  color: #FFFFFF;
   height: 20px;
   border: 0;
   display: flex;
@@ -26,7 +17,7 @@ const StyledThemeButton = styled('button', buttonProps)`
   border-radius: 4px;
   margin-top: 5px;
   cursor: pointer;
-  font-family: ${getFontFamily(FONT_FAMILY.TERTIARY)};
+  font-family: Bangers, sans-serif;
   justify-content: center;
   align-items: center;
 `

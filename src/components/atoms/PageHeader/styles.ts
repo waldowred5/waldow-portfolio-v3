@@ -1,16 +1,10 @@
 import styled from 'styled-components'
-import { getFontFamily } from '../../../utils//theme'
 import { FONT_FAMILY } from '../../../utils/constants'
 import { media, SCREEN_SIZE } from '../../../utils/layout'
 
-const getPageHeaderStyle = (propName) => ({ theme }) => {
-  const { pageHeader } = theme.components
-  return pageHeader[propName]
-}
-
 const StyledHeader = styled.div`
   // Color
-  background: linear-gradient(${getPageHeaderStyle('linearGradient')});
+  background: linear-gradient(#07B8ED73, #FFFFFF00);
   
   // Display
   align-items: center;
@@ -32,9 +26,8 @@ export const StyledHeading = styled.p`
   justify-content: center;
   
   // Font
-  color: ${getPageHeaderStyle('fontColor')};
-  font-size: ${getPageHeaderStyle('fontSize')}px;
-  font-family: ${getFontFamily(FONT_FAMILY.TERTIARY)};
+  color: #E0E0E0;
+  font-size: 28px;
   text-align: center;
 
   // Sizing

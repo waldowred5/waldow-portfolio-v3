@@ -2,13 +2,6 @@ import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
 import { fontPx, media, SCREEN_SIZE } from '../../../utils/layout'
 import { FONT_FAMILY } from '../../../utils/constants'
-import { getNavBarStyle } from '../../molecules/NavBar/styles'
-import { getFontFamily } from '../../../utils/theme'
-
-const getNavItemStyle = (propName) => ({ theme }) => {
-  const { navItem } = theme.components.navBar
-  return navItem[propName]
-}
 
 const StyledNavItem = styled.li`
   // Display
@@ -26,10 +19,10 @@ const StyledNavItem = styled.li`
   ${media[SCREEN_SIZE.TABLET]} {
     .active {
       // Color
-      background: linear-gradient(${getNavItemStyle('linearGradientActive')});
+      background: linear-gradient(#FFFFFF00, #07B8ED59);
 
       // Sizing
-      border-bottom: ${getNavItemStyle('borderBottomActive')};
+      border-bottom: 4px solid #07B8ED;
     }
   }
 `
@@ -45,7 +38,6 @@ export const NavLink = styled(LinkS)`
 
   // Sizing
   box-sizing: border-box;
-  height: ${getNavBarStyle('heightMobile')}px;
   width: ${fontPx(120)};
 
   .active {
@@ -58,23 +50,21 @@ export const NavLink = styled(LinkS)`
     display: flex;
 
     // Sizing
-    height: ${getNavBarStyle('heightTablet')}px;
 
     :not(.active) &:hover {
       // Color
-      background: linear-gradient(${getNavItemStyle('linearGradientHover')});
+      background: linear-gradient(#FFFFFF00, #38E00033);
 
       // Sizing
-      border-bottom: ${getNavItemStyle('borderBottomHover')};
+      border-bottom: 4px solid #38E00080;
     }
   }
 `
 
 export const NavLabel = styled.p`
   // Font
-  font-size: ${getNavItemStyle('fontSize')}px;
-  font-family: ${getFontFamily(FONT_FAMILY.TERTIARY)};
-  color: ${getNavItemStyle('fontColor')};
+  font-size: 28px;
+  color: #E0E0E0;
 
   // Sizing
   margin: 0;

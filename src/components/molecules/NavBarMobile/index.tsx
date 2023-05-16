@@ -10,7 +10,7 @@ import {
 // import { Logo } from 'components/atoms/Logo'
 import PropTypes, { shape } from 'prop-types'
 import { NavItem } from '../../atoms/NavItem'
-import ThemeButton from '../../atoms/themeSelector'
+import ThemeButton from '../../atoms/ThemeSelector'
 import { NavItemMobile } from '../../atoms/NavItemMobile'
 import { type Route } from '../../../routes'
 
