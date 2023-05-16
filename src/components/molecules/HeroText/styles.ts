@@ -1,23 +1,8 @@
 import styled from 'styled-components'
 // import PropTypes from 'prop-types';
 import { fontPx, media, SCREEN_SIZE } from '../../../utils/layout'
-import { FONT_FAMILY, FONT_WEIGHT, HEADING_VARIANT } from '../../../utils/constants'
-import { getFontFamily, getFontWeight } from '../../../utils/theme'
+import { FONT_FAMILY, FONT_WEIGHT } from '../../../utils/constants'
 import { NavLink } from 'react-router-dom'
-
-const getHeadingStyle = (colorVariant, propName) => ({ theme }) => {
-  return theme.components.heading[colorVariant][propName]
-}
-
-const getDividerStyle = (propName) => ({ theme }) => {
-  const { divider } = theme.components
-  return divider[propName]
-}
-
-const getHeroTextStyle = (propName) => ({ theme }) => {
-  const { heroText } = theme.components
-  return heroText[propName]
-}
 
 const HeroContainer = styled.div`
   // Display
@@ -35,7 +20,7 @@ const HeroContainer = styled.div`
 
 export const PrimaryHeadingWrapper = styled.div`
   // Color
-  color: ${getHeadingStyle(HEADING_VARIANT.SECONDARY, 'color')};
+  color: #38E000;
 
   // Display
   display: flex;
@@ -44,27 +29,25 @@ export const PrimaryHeadingWrapper = styled.div`
 
 export const PrimaryHeading = styled.h1`
   // Font
-  font-family: ${getFontFamily(FONT_FAMILY.TERTIARY)};
-  font-size: ${getHeroTextStyle('primaryHeadingSizeMobile')}px;
-  font-weight: ${getFontWeight(FONT_WEIGHT.REGULAR)};
-  line-height: ${getHeroTextStyle('primaryHeadingLineHeightMobile')}px;
+  font-size: 48px;
+  line-height: 52px;
 
   // Sizing
-  margin: ${getHeroTextStyle('primaryHeadingMarginMobile')};
+  margin: 0 2px 0 0;
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Font
-    font-size: ${getHeroTextStyle('primaryHeadingSizeTablet')}px;
-    line-height: ${getHeroTextStyle('primaryHeadingLineHeightTablet')}px;
+    font-size: 96px;
+    line-height: 110px;
 
     // Sizing
-    margin: ${getHeroTextStyle('primaryHeadingMarginTablet')};
+    margin: 0 8px 0 0;
   }
 `
 
 export const SecondaryHeadingWrapper = styled.div`
   // Color
-  color: ${getHeadingStyle(HEADING_VARIANT.TERTIARY, 'color')};
+  color: #C56CEF;
 
   // Display
   display: flex;
@@ -73,9 +56,7 @@ export const SecondaryHeadingWrapper = styled.div`
 
 export const SecondaryHeading = styled.h3`
   // Font
-  font-size: ${getHeroTextStyle('secondaryHeadingSizeMobile')}px;
-  font-weight: ${getFontWeight(FONT_WEIGHT.REGULAR)};
-  line-height: ${getHeroTextStyle('secondaryHeadingLineHeightMobile')}px;
+  font-size: 16px;
   text-align: center;
 
   // Sizing
@@ -83,11 +64,8 @@ export const SecondaryHeading = styled.h3`
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Font
-    font-size: ${getHeroTextStyle('secondaryHeadingSizeTablet')}px;
-    line-height: ${getHeroTextStyle('secondaryHeadingLineHeightTablet')}px;
 
     // Sizing
-    margin: ${getHeroTextStyle('secondaryHeadingMargin')};
   }
 `
 
@@ -99,11 +77,8 @@ export const SecondaryHeadingLinkWrapper = styled.h3`
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Font
-    font-size: ${getHeroTextStyle('secondaryHeadingSizeTablet')}px;
-    line-height: ${getHeroTextStyle('secondaryHeadingLineHeightTablet')}px;
 
     // Sizing
-    margin: ${getHeroTextStyle('secondaryHeadingMargin')};
   }
 `
 
@@ -113,14 +88,11 @@ export const SecondaryHeadingLink = styled(NavLink)`
 
 export const StyledDivider = styled.div`
   // Color
-  background: ${getDividerStyle('dividerColor')};
 
   // Display
   display: flex;
 
   // Sizing
-  height: ${getDividerStyle('dividerSize')}px;
-  margin-bottom: ${getHeroTextStyle('dividerMargin')}px;
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Display
@@ -150,21 +122,13 @@ export const StyledHeroText = styled.div`
 
 export const SuffixHeading = styled.h1`
   // Font
-  font-family: '${getFontFamily(FONT_FAMILY.SECONDARY)}', cursive;
-  font-size: ${getHeroTextStyle('suffixHeadingSizeMobile')}px;
-  font-weight: ${getFontWeight(FONT_WEIGHT.SEMI_BOLD)};
-  line-height: ${getHeroTextStyle('suffixHeadingLineHeightMobile')}px;
 
   // Sizing
-  margin: ${getHeroTextStyle('suffixHeadingMarginMobile')};
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Font
-    font-size: ${getHeroTextStyle('suffixHeadingSizeTablet')}px;
-    line-height: ${getHeroTextStyle('suffixHeadingLineHeightTablet')}px;
 
     // Sizing
-    margin: ${getHeroTextStyle('suffixHeadingMarginTablet')};
   }
 `
 

@@ -1,15 +1,7 @@
 import styled from 'styled-components'
-import { media, SCREEN_SIZE } from '../../../utils//layout'
-
-export const getNavBarStyle = (propName) => ({ theme }) => {
-  const { navBar } = theme.components
-  return navBar[propName]
-}
+import { media, SCREEN_SIZE } from '../../../utils/layout'
 
 export const BackgroundFilter = styled.div`
-  // Color
-  background: ${getNavBarStyle('backgroundColor')};
-
   // Display
   display: flex;
 
@@ -20,19 +12,18 @@ export const BackgroundFilter = styled.div`
 
   // Sizing
   box-sizing: border-box;
-  height: ${getNavBarStyle('heightMobile')}px;
-  margin-top: -${getNavBarStyle('heightMobile')}px;
+  height: 64px;
+  margin-top: -64px;
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Sizing
-    height: ${getNavBarStyle('heightTablet')}px;
-    margin-top: -${getNavBarStyle('heightTablet')}px;
+    height: 90px;
+    margin-top: -90px;
   }
 `
 
 const StyledNavBar = styled.nav`
   // Color
-  background: linear-gradient(${getNavBarStyle('linearGradient')});
 
   // Display
   align-items: center;

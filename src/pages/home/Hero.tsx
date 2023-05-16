@@ -3,7 +3,9 @@ import { HeroController } from '../../controllers/Hero'
 
 const Hero = () => {
   return (
-    <HeroController/>
+    <div id='hero' style={{ display: 'flex', flexDirection: 'column' }}>
+      <HeroController />
+    </div>
   )
 }
 

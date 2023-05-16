@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 // import { StyledIconContainer } from 'components/atoms/IconComponent/styles';
 
 // var hoistedWrapper = StyledIconContainer;
 
-export const StyledSvg = styled.svg``;
+export const StyledSvg = styled.svg``
 
 const StyledPath = styled.path`
   // Animation
@@ -13,6 +13,6 @@ const StyledPath = styled.path`
     // Color
     fill: #07B8ED;
   }
-`;
+`
 
-export default StyledPath;
+export default StyledPath
