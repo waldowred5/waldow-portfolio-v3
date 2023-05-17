@@ -24,7 +24,8 @@ export const NavBarController = (props) => {
   return (
     <>
       {width < BREAKPOINTS[SCREEN_SIZE.TABLET]
-        ? <NavBarMobile {...props} routes={routes}/>
+        ? <NavBar {...props} routes={routes}/>
+        // ? <NavBarMobile {...props} routes={routes}/>
         : <NavBar {...props} routes={routes}/>
       }
     </>
