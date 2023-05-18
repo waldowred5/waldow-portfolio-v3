@@ -26,10 +26,10 @@ const RoutesList = ({
   return (
     <>
       {
-        routes.map((route, index) => (
+        routes.map(({ label, id }, index) => (
           isMobile
-            ? <NavItemMobile key={index} label={route.label} id={route.id}/>
-            : <NavItem key={index} label={route.label} id={route.id}/>
+            ? <NavItemMobile key={index} label={label} id={id}/>
+            : <NavItem key={index} label={label} id={id}/>
         ))}
     </>
   )

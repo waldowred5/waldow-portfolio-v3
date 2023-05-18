@@ -24,17 +24,15 @@ export const BackgroundFilter = styled.div`
 
 const StyledNavBar = styled.nav`
   // Color
+  background-image: linear-gradient(180deg, #000000 70%, transparent 100%);
 
   // Display
   align-items: center;
   display: flex;
-  flex: 1;
   justify-content: space-between;
-`
-
-export const LogoLinkWrapper = styled.div`
-  // Display
-  display: flex;
+  
+  // Sizing
+  width: 100%;
 `
 
 export const NavMenu = styled.ul`
