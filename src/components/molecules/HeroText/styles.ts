@@ -1,134 +1,147 @@
 import styled from 'styled-components'
-// import PropTypes from 'prop-types';
-import { fontPx, media, SCREEN_SIZE } from '../../../utils/layout'
-import { FONT_FAMILY, FONT_WEIGHT } from '../../../utils/constants'
-import { NavLink } from 'react-router-dom'
+import { media, SCREEN_SIZE } from '../../../utils/layout'
 
 const HeroContainer = styled.div`
+  // Color
+  color: #FFFFFF;
+  
   // Display
-  display: flex;
+  display: grid;
+  position: absolute;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: 0.65fr 1fr 1fr;
 
   // Sizing
-  margin: 24px 24px 88px 24px;
-
-  ${media[SCREEN_SIZE.TABLET]} {
-    // Sizing
-    margin: 0;
-  }
+  height: 100vh;
+  width: 100vw;
 `
 
 export const PrimaryHeadingWrapper = styled.div`
-  // Color
-  color: #38E000;
-
   // Display
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const PrefixPrimaryHeading = styled.h1`
+  // Font
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 32px;
+
+  // Sizing
+  margin: 0;
+
+  ${media[SCREEN_SIZE.TABLET]} {
+    // Font
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  ${media[SCREEN_SIZE.DESKTOP]} {
+    // Font
+    font-size: 96px;
+    line-height: 96px;
+  }
 `
 
 export const PrimaryHeading = styled.h1`
   // Font
-  font-size: 48px;
-  line-height: 52px;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px #000000;
 
   // Sizing
-  margin: 0 2px 0 0;
+  margin: 0;
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Font
-    font-size: 96px;
-    line-height: 110px;
+    font-size: 144px;
+    line-height: 144px;
+  }
 
-    // Sizing
-    margin: 0 8px 0 0;
+  ${media[SCREEN_SIZE.DESKTOP]} {
+    // Font
+    font-size: 208px;
+    line-height: 208px;
   }
 `
 
-export const SecondaryHeadingWrapper = styled.div`
+export const HorizontalSeparator = styled.div`
   // Color
-  color: #C56CEF;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 2px #000000;
+  
+  // Sizing
+  height: 2px;
+  width: 80vw;
+  margin: 20px 0;
+`
 
+export const SecondaryHeadingWrapper = styled.div`
   // Display
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: 18px;
+
+  ${media[SCREEN_SIZE.TABLET]} {
+    // Display
+    row-gap: 24px;
+  }
+`
+
+export const SecondaryHeadingGridWrapper = styled.div`
+  // Display
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  align-items: center;
+  justify-content: center;
+
+  ${media[SCREEN_SIZE.TABLET]} {
+    // Display
+    row-gap: 24px;
+  }
+
+  ${media[SCREEN_SIZE.DESKTOP]} {
+    // Display
+    flex-direction: row;
+    column-gap: 24px;
+  }
+`
+
+export const VerticalSeparator = styled.div`  
+  // Color
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 2px #000000;
+
+  // Display
+  display: none;
+  
+  // Sizing
+  width: 2px;
+  height: 24px;
+
+  ${media[SCREEN_SIZE.DESKTOP]} {
+    // Display
+    display: flex;
+  }
 `
 
 export const SecondaryHeading = styled.h3`
   // Font
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 400;
   text-align: center;
-
-  // Sizing
-  margin: 0;
+  text-shadow: 1px 1px 2px #000000;
 
   ${media[SCREEN_SIZE.TABLET]} {
     // Font
-
-    // Sizing
-  }
-`
-
-export const SecondaryHeadingLinkWrapper = styled.h3`
-  // Sizing
-  margin: 0;
-
-  text-decoration: none;
-
-  ${media[SCREEN_SIZE.TABLET]} {
-    // Font
-
-    // Sizing
-  }
-`
-
-export const SecondaryHeadingLink = styled(NavLink)`
-  text-decoration: none;
-`
-
-export const StyledDivider = styled.div`
-  // Color
-
-  // Display
-  display: flex;
-
-  // Sizing
-
-  ${media[SCREEN_SIZE.TABLET]} {
-    // Display
-    display: none;
-  }
-`
-
-export const StyledHeroText = styled.div`
-  // Display
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  // Sizing
-  //margin-bottom: 24px;
-
-  ${media[SCREEN_SIZE.TABLET]} {
-    // Display
-    align-items: flex-end;
-
-    // Position
-    position: absolute;
-    bottom: ${fontPx(48)};
-    right: ${fontPx(36)};
-  }
-`
-
-export const SuffixHeading = styled.h1`
-  // Font
-
-  // Sizing
-
-  ${media[SCREEN_SIZE.TABLET]} {
-    // Font
-
-    // Sizing
+    font-size: 36px;
+    line-height: 36px;
   }
 `
 

@@ -1,6 +1,5 @@
 import React from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { CanvasContainer } from './styles'
+import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import waterVertexShader from '../../../assets/shaders/water/vertex.glsl'
 import waterFragmentShader from '../../../assets/shaders/water/fragment.glsl'
@@ -39,7 +38,7 @@ export const HeroScene = () => {
 
   return (
     <>
-      <OrbitControls/>
+      {/* <OrbitControls/> */}
       <mesh
         rotation={[-Math.PI * 0.5, 0, 0]}
       >

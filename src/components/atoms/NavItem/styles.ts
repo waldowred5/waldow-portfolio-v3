@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
 import { fontPx, media, SCREEN_SIZE } from '../../../utils/layout'
-import { FONT_FAMILY } from '../../../utils/constants'
 
 const StyledNavItem = styled.li`
   // Display

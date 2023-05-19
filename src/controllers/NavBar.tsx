@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useState } from 'react'
-import { NavBar } from '../components/molecules/NavBar'
+import { NavBar } from '../components/molecules/NavBar/NavBar'
 import routes from '../routes'
-import { NavBarMobile } from '../components/molecules/NavBarMobile'
 import { BREAKPOINTS, SCREEN_SIZE } from '../utils/layout'
 
 const useWindowSize = () => {
@@ -14,19 +13,18 @@ const useWindowSize = () => {
     window.addEventListener('resize', updateSize)
     updateSize()
 
-    return () => { window.removeEventListener('resize', updateSize) }
+    return () => {
+      window.removeEventListener('resize', updateSize)
+    }
   }, [])
   return size
 }
 
 export const NavBarController = (props) => {
   const [width] = useWindowSize()
+  const isMobile = width < BREAKPOINTS[SCREEN_SIZE.TABLET]
+
   return (
-    <>
-      {width < BREAKPOINTS[SCREEN_SIZE.TABLET]
-        ? <NavBarMobile {...props} routes={routes}/>
-        : <NavBar {...props} routes={routes}/>
-      }
-    </>
+    <NavBar {...props} routes={routes} isMobile={isMobile}/>
   )
 }

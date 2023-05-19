@@ -12,7 +12,7 @@ export const HeroCanvas = () => {
           near: 0.1,
           far: 100,
           position: [2, 0.4, 0.5],
-          rotation: [-Math.PI * 2, Math.PI * 0.3, Math.PI * 1.1],
+          // rotation: [-Math.PI * 2, Math.PI * 0.3, Math.PI * 1.1],
         }}
         legacy={true}
       >

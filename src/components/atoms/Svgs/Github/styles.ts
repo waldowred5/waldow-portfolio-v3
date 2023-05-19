@@ -1,7 +1,4 @@
 import styled from 'styled-components'
-// import { StyledIconContainer } from 'components/atoms/IconComponent/styles';
-
-// var hoistedWrapper = StyledIconContainer;
 
 export const StyledSvg = styled.svg``
 
